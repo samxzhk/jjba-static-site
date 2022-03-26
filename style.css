@@ -1,0 +1,222 @@
+/*CSS reset start*/
+html{box-sizing: border-box;}
+*, *::after, *::before { box-sizing:inherit;padding:0;margin:0;}
+a{text-decoration: none;}
+li{list-style-type: none;}
+/*CSS reset end*/
+img
+{
+  width: 100%;
+  height:100%;
+}
+
+/*-------- HEADER PART ------*/
+#header
+{
+  min-height: 500px;
+  text-align: center;
+  color:#fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header h1 
+{
+
+  margin-bottom:1rem;
+  font-weight: bolder;
+}
+
+#header p 
+{
+  color:#ededed;
+}
+
+ #header::after
+{
+  content:'';
+  position:absolute;
+  
+  width:100%;
+  height: 100%;
+   background: 
+    linear-gradient( rgba(68, 68, 68, 0.253), rgb(0, 0, 0)),
+    url('images/jojo-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:-1;
+  opacity:0.9;
+} 
+
+/* ----- MAIN PART ----- */
+
+#main
+{
+  padding:2rem;
+  text-align: center;
+}
+
+/* ------ FIRST SECTION  -------*/
+
+#first
+{
+  padding:2rem;
+  margin-bottom: 1rem;
+}
+#first .content-wrapper h2 
+{
+  margin-bottom:1rem;
+}
+
+/* ---- SECOND SECTION ---- */
+
+#second h2
+{
+  margin-bottom: 1rem;
+}
+
+#second .content-wrapper
+{
+  padding:1rem;
+}
+
+#second .content-wrapper ul li
+{
+  border-radius: 10px;
+  padding:0.5rem;
+  overflow: hidden;
+  line-height: 1.5;
+  background-color: #dfdfdf;
+  margin-bottom:1rem;
+  box-shadow: 3px 3px 1px rgba(68, 68, 68, 0.253);
+}
+
+/* ----- SECTION THREE*/
+#three 
+{
+  padding:2rem;
+  line-height: 1.5;
+  
+}
+
+#three h2 
+{
+  margin-block:1rem;
+}
+
+#four 
+{
+  padding:1rem;
+  min-height: fit-content;
+}
+
+#four .box:first-child h2
+{
+  margin-bottom:1rem;
+}
+
+section#four #araki
+{
+  position: relative;
+}
+ section#four .overlay
+  {
+    
+    position:absolute;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding:1rem;
+    height:20%;
+    background-color: rgba(0, 0, 0, 0.548);
+    color:#fff;
+    left:0;
+    top:70%;
+
+  }
+
+
+#back-img 
+{
+  min-height: 200px;
+  background-image: url('images/jojos.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width:500px)
+{
+  #second .content-wrapper 
+  {
+    width:80%;
+    margin-inline: auto;
+  }
+  #second ul
+  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:15px;
+    justify-content: space-around;
+  }
+
+  .grid 
+  {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #first .content-wrapper
+  {
+    grid-column: 2/4;
+    line-height: 1.5;
+  }
+  #first .content-wrapper h2 
+  {
+    font-size:2.7rem;
+    letter-spacing: 5px;
+  }
+
+  #three .content-wrapper
+  {
+
+    grid-column: 2/4;
+    line-height: 2;
+  }
+  #three .content-wrapper h2 
+  {
+    font-size:2.5rem;
+  }
+
+  section#four.grid div:first-child
+  {
+    grid-column: 2/3;
+    position:relative;
+  }
+
+  section#four.grid div:first-child .overlay
+  {
+    position:absolute;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding:1rem;
+    height:20%;
+    background-color: rgba(0, 0, 0, 0.548);
+    color:#fff;
+    left:0;
+    top:70%;
+
+  }
+
+  section#four.grid div:last-child
+  {
+    grid-column: 3/4;
+  }
+
+
+}
